@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vidstack MP4 Example</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vidstack/styles/defaults.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vidstack/styles/community-skin/video.min.css" />
+  <script type="module" src="https://cdn.jsdelivr.net/npm/vidstack/dist/cdn/prod.min.js"></script>
+</head>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
+
+media-player {
+  --video-brand: red;
+  --video-font-family: 'Karla', sans-serif;
+}
+</style>
+<body>
+  <media-player
+    title="Solo Leveling S2E1"
+    src="https://pub-c4c3435960fc48e0a4cf94c9e861d76f.r2.dev/Solo%20Leveling%20S2E1.mp4"
+    poster="https://i3.ytimg.com/vi/aqz-KE-bpKQ/maxresdefault.jpg"
+    thumbnails="https://media-files.vidstack.io/sprite-fight/thumbnails.vtt"
+    aspect-ratio="16/9"
+    crossorigin
+  >
+    <media-outlet>
+      <media-poster
+        alt="Solo Leveling S2E1"
+      ></media-poster>
+      <track
+        src="https://media-files.vidstack.io/sprite-fight/subs/english.vtt"
+        label="English"
+        srclang="en-US"
+        kind="subtitles"
+        default
+      />
+      <track
+        src="https://s3.amazonaws.com/demo.jwplayer.com/text-tracks/assets/chapters.vtt"
+        srclang="en-US"
+        kind="chapters"
+        default
+      />
+    </media-outlet>
+    <media-community-skin></media-community-skin>
+  </media-player>
+</body>
+</html>
